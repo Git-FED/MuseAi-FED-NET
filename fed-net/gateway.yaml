@@ -1,0 +1,18 @@
+# Closed-by-default FED NET gateway configuration.
+# Every field is commented so edits remain explicit and reviewable.
+bind_address: "127.0.0.1" # Address on which the share gateway listens.
+bind_port: 0 # Port to listen on; 0 means disabled until an operator chooses one.
+allowlist_file: "fed-net/allowlist.md" # File containing one permitted guest per line.
+forwarding: [] # Forwarding rules; empty means nothing is forwarded.
+# Example rule shape (leave commented until intentionally enabled):
+# - name: "guest-web"
+#   protocol: "tcp" # Transport protocol enforced by the gateway.
+#   listen_port: 0 # Guest-facing port; 0 keeps this example disabled.
+#   target_host: "" # Destination host; blank is invalid and must be filled deliberately.
+#   target_port: 0 # Destination port; 0 keeps this example disabled.
+bandwidth:
+  per_guest_kbps: 0 # Per-guest cap; 0 means no guest traffic is enabled by default.
+  burst_kb: 0 # Allowed burst; 0 prevents an implicit burst allowance.
+logging:
+  enabled: true # Record decisions and failures for review.
+  file: "fed-net.log" # Log destination controlled by the share implementation.

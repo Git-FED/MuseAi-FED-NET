@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FED NET — Age-Gated Support</title>
+  <meta name="description" content="Age-gated Inter FED NET support, subscription, and donation options.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page donations-page">
+  <header class="site-nav">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="FED NET signal symbol"><span>INTER FED NET</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Signal field</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="demo.html">Demo</a>
+      <a href="donations.html" aria-current="page">Support</a>
+    </nav>
+  </header>
+
+  <main class="page-shell support-shell">
+    <p class="eyebrow">SUPPORT TERMINAL / AGE GATED</p>
+    <h1>KEEP THE SIGNAL WEIRD.</h1>
+    <p class="lede">Choose a support route below. Subscription and donation services are operated by their respective providers; FED NET does not store payment details on this page.</p>
+
+    <section id="age-gate" class="age-gate" aria-labelledby="age-gate-title">
+      <div class="gate-symbol" aria-hidden="true">18+</div>
+      <div>
+        <p class="eyebrow">ACCESS CHECK</p>
+        <h2 id="age-gate-title">Are you 18 or older?</h2>
+        <p>Support options are age-gated for this project. Confirm your age to reveal the provider tabs. This is a front-end notice, not identity or legal-age verification.</p>
+        <button id="age-confirm" class="button" type="button">I am 18 or older — continue</button>
+        <a class="button secondary" href="index.html">Leave this page</a>
+      </div>
+    </section>
+
+    <section id="support-content" class="support-content" hidden aria-live="polite">
+      <div class="support-note"><strong>Provider checkout:</strong> Review the provider's terms, currency, recurring amount, and cancellation policy before confirming any payment.</div>
+      <div class="support-tabs" role="tablist" aria-label="Support providers">
+        <button class="support-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-paypal" id="tab-paypal" data-panel="panel-paypal">PayPal</button>
+        <button class="support-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-sponsors" id="tab-sponsors" data-panel="panel-sponsors">GitHub Sponsors</button>
+        <button class="support-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-kofi" id="tab-kofi" data-panel="panel-kofi">Ko-fi</button>
+        <button class="support-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-coffee" id="tab-coffee" data-panel="panel-coffee">Buy Me a Book</button>
+        <button class="support-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-crypto" id="tab-crypto" data-panel="panel-crypto">Crypto</button>
+        <button class="support-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-stripe" id="tab-stripe" data-panel="panel-stripe">Card / Stripe</button>
+      </div>
+
+      <article class="support-panel is-active" id="panel-paypal" role="tabpanel" aria-labelledby="tab-paypal">
+        <p class="panel-kicker">RECURRING SUPPORT</p>
+        <h2>PayPal subscription</h2>
+        <p>Use the provider-hosted subscription button below. The plan and quantity are supplied by the PayPal configuration.</p>
+        <div id="paypal-button-container-P-4FD24238VX4902214NK2XP2Y" class="provider-box"><p class="provider-loading">Loading PayPal checkout…</p></div>
+        <p id="paypal-status" class="provider-status" role="status"></p>
+      </article>
+
+      <article class="support-panel" id="panel-sponsors" role="tabpanel" aria-labelledby="tab-sponsors" hidden>
+        <p class="panel-kicker">OPEN-SOURCE SUPPORT</p>
+        <h2>GitHub Sponsors</h2>
+        <p>Support Git-FED through GitHub's full sponsor card.</p>
+        <div class="provider-box sponsor-box sponsor-card-box">
+          <div class="gh-sponsor-card">
+            <iframe src="https://github.com/sponsors/Git-FED/card" title="Sponsor Git-FED" width="600" height="225" frameborder="0" scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <noscript><a href="https://github.com/sponsors/Git-FED">Sponsor Git-FED on GitHub</a></noscript>
+          </div>
+        </div>
+        <a class="text-link" href="https://github.com/sponsors/Git-FED" target="_blank" rel="noreferrer noopener">Open GitHub Sponsors</a>
+      </article>
+
+      <article class="support-panel" id="panel-kofi" role="tabpanel" aria-labelledby="tab-kofi" hidden>
+        <p class="panel-kicker">ONE-OFF OR FLEXIBLE SUPPORT</p>
+        <h2>Ko-fi</h2>
+        <p>The Ko-fi floating support button is enabled after the age gate is accepted.</p>
+        <div class="provider-box"><button class="button" id="kofi-launch" type="button">Open Ko-fi support</button><p id="kofi-status" class="provider-status" role="status"></p></div>
+      </article>
+
+      <article class="support-panel" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" hidden>
+        <p class="panel-kicker">BOOK-FUND SUPPORT</p>
+        <h2>Buy Me a Book</h2>
+        <p>Open the Buy Me a Coffee provider page in a new tab.</p>
+        <div class="provider-box"><a href="https://www.buymeacoffee.com/fedpromptly" target="_blank" rel="noreferrer noopener"><img class="payment-image" src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20book&emoji=%F0%9F%93%96&slug=fedpromptly&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" alt="Buy me a book on Buy Me a Coffee"></a></div>
+      </article>
+
+      <article class="support-panel" id="panel-crypto" role="tabpanel" aria-labelledby="tab-crypto" hidden>
+        <p class="panel-kicker">CRYPTOCURRENCY</p>
+        <h2>NOWPayments</h2>
+        <p>Open the cryptocurrency payment provider in a new tab.</p>
+        <div class="provider-box"><a href="https://nowpayments.io/payment/?iid=5997958570&source=button" target="_blank" rel="noreferrer noopener"><img class="payment-image crypto-button" src="https://nowpayments.io/images/embeds/payments-button-white.svg" alt="Cryptocurrency and Bitcoin payment button by NOWPayments"></a></div>
+      </article>
+
+      <article class="support-panel" id="panel-stripe" role="tabpanel" aria-labelledby="tab-stripe" hidden>
+        <p class="panel-kicker">CARD CHECKOUT</p>
+        <h2>Stripe</h2>
+        <p>Use the provider-hosted Stripe buy button for card checkout.</p>
+        <div class="provider-box" id="stripe-provider-box"><p class="provider-loading">Loading Stripe checkout…</p></div>
+      </article>
+    </section>
+  </main>
+  <footer class="fed-footer">
+  <div class="footer-scanline" aria-hidden="true"></div>
+  <div class="footer-head">
+    <div><p class="eyebrow">FED-OS / PUBLIC GATEWAY</p><h2>KEEP THE SIGNAL MOVING.</h2></div>
+    <span class="footer-pulse"><i></i> SYSTEMS ONLINE</span>
+  </div>
+  <div class="footer-grid">
+    <section><h3>FED-OS</h3><a class="footer-button" href="https://www.fedpromptly.org" target="_blank" rel="noreferrer noopener">Ecosystem</a><a class="footer-button" href="https://www.fedpromptly.com/aid" target="_blank" rel="noreferrer noopener">Membership</a><a class="footer-button" href="https://www.jabburr.com/fed-os" target="_blank" rel="noreferrer noopener">Storefront</a><a class="footer-button" href="https://whop.com/fedpromptly/" target="_blank" rel="noreferrer noopener">Whop</a></section>
+    <section><h3>CONTACT</h3><a class="footer-button" href="mailto:contact@fedpromptly.com">General</a><a class="footer-button" href="mailto:support@fedpromptly.com">Support</a><a class="footer-button" href="mailto:business@fedpromptly.com">Business</a><a class="footer-button" href="mailto:careers@fedpromptly.com">Careers</a></section>
+    <section><h3>MEDIA</h3><a class="footer-button" href="https://substack.com/@fedpromptly" target="_blank" rel="noreferrer noopener">Articles</a><a class="footer-button" href="https://fedpromptly.wordpress.com/" target="_blank" rel="noreferrer noopener">Blog</a><a class="footer-button" href="https://gitfed.substack.com/" target="_blank" rel="noreferrer noopener">GitFed Blog</a><a class="footer-button" href="https://www.deviantart.com/fedpromptly" target="_blank" rel="noreferrer noopener">Artwork</a><a class="footer-button" href="https://bsky.app/profile/fed-os.bsky.social" target="_blank" rel="noreferrer noopener">Bluesky</a><a class="footer-button" href="https://x.com/Fedpromptly" target="_blank" rel="noreferrer noopener">X / Ads</a></section>
+    <section><h3>SUPPORT</h3><a class="footer-button" href="https://www.patreon.com/c/FEDpromptly" target="_blank" rel="noreferrer noopener">Patreon</a><a class="footer-button" href="https://buymeacoffee.com/fedpromptly" target="_blank" rel="noreferrer noopener">Tips</a><a class="footer-button" href="https://discord.gg/Jm4XStx4Pf" target="_blank" rel="noreferrer noopener">Developers</a><a class="footer-button" href="private-communities.html">Private Communities</a></section>
+  </div>
+  <div class="footer-bottom"><span>Public links are landing pages; premium and private access stays provider-gated.</span><a href="index.html">Back to signal field</a></div>
+</footer>
+  <script src="donations.js"></script>
+</body>
+</html>
